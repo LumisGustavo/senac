@@ -1,0 +1,46 @@
+body{
+    background-color: #B3E5E9;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+header{
+    background-color: none;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.pesquisa{
+    background-color: #42B0DF;
+    width:135px;
+    height:135px;
+    padding: 1px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#logo{
+    display: flex;
+    margin: -23px;
+    width: 180px;
+    border-radius: 6px;
+}
+
+#barra-pesquisar{
+    width: 600px;
+    margin-left: -900px;
+    padding-left: 10px;
+    position: absolute;
+    right: 1100px;
+    top: 90px;
+    
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    padding-left: 33px;
+}

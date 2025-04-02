@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- A tag abaixo define o conjunto de caracteres -->
+        <meta charset="UTF-8">
+        <!-- Ajusta a escala da página para despositivos -->
+        <meta name="viewport" content="width=device-width, initial_scale=1.0">
+        <title>Primeira aula de HTML e CSS</title>
+        <!-- Importa o arquivo CSS externo para esta página -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <nav>
+            <ul class="menu">
+                <li><a href=#>Início</a></li>
+                <li><a href=#>Sobre</a></li>
+                <li><a href=#>Contato</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <!-- A tag <h1> cria títulos -->
+            <h1>Meu primeiro site com HTML</h1>
+            <!-- A tag <p> cria textos em parágrafos -->
+            <p>Aprendendo a estilizar páginas com CSS</p>
+        </header>
+        <main>
+            <section class="container">
+                <!-- A tag <h2> serve para criar um subtítulo -->
+                <h2>Hello World</h2>
+                <p>Este é um exemplo básico para entender a estrutura do site</p>
+
+                <!-- A tag <img> serve para inserir imagens no HTML -->
+                <img src="C:\Users\Senac\Desktop\Gustavo\primeira-aula\dog.webp" alt="Imagem Ilustrativa" class="imagem-exemplo">
+
+                <!-- Lista simples com tópicos usando h3 (texto destaque) e <ul> -->
+                <h3>O que já aprendemos:</h3>
+                <ul class="lista-topicos">
+                    <li>Estrutura básica de HTML</li>
+                    <li>Como importar um arquivo CSS para estilizar</li>
+                    <li>Como modificar elementos através do CSS</li>
+                </ul>
+
+                <!-- A tag <button> serve para criar botôes -->
+                <button class="botao">Clique aqui para clicar num botão (te juro da em nada)</button>
+            </section>
+            
+            <!-- Essa vai ser a sessão para contato -->
+            <section class="formulario">
+                <h3>Fale comigo 😃</h3>
+
+                <!-- A tag <form> cria formulários -->
+                    <form>
+                        <label for="none">Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+
+                        <button type="submit" class="botao">Enviar</button>
+                    </form>
+            </section>
+        </main>
+        <!-- Rodapé da página -->
+        <footer>
+            <p>Desenvolvido por Luiz Gustavo</p>
+        </footer>
+    </body>
+</html>
