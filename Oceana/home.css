@@ -67,3 +67,41 @@ header{
     transition: all 0.2s ease-out;
     background-color: #6495ED;
 }
+
+footer{
+    background-color: #6495ED;
+    color: white;
+    width: 1830px;
+    padding: 25px;
+    font-size: 12px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+}
+
+#developer{
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+
+#copyright{
+    position: absolute;
+    bottom: 0px;
+    right: 230px;
+}
+
+#politicas{
+    position: absolute;
+    bottom: -10px;
+    right: 420px;
+    font-size: 20px;
+}
+
+#reclame-aqui{
+    position: absolute;
+    bottom: -38px;
+    right: 1600px;
+    font-size: 40px;
+}
