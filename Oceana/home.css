@@ -30,12 +30,12 @@ header{
 }
 
 #barra-pesquisar{
-    width: 600px;
+    width: 1000px;
     padding: 15px;
     padding-left: 10px;
     font-size: 25px;
     position: absolute;
-    right: 1050px;
+    right: 640px;
     top: 70px;
     border: 3px solid;
     border-color: #ADADAD;
@@ -71,13 +71,13 @@ header{
 footer{
     background-color: #6495ED;
     color: white;
-    width: 1830px;
+    width: 1600px;
     padding: 25px;
     font-size: 12px;
     border-radius: 5px;
     position: absolute;
     bottom: 5px;
-    left: 20px;
+    left: 260px;
 }
 
 #developer{
@@ -99,9 +99,83 @@ footer{
     font-size: 20px;
 }
 
+#politicas a{
+    color: white;
+}
+
+#politicas a:hover{
+    color: whitesmoke;
+}
+
 #reclame-aqui{
     position: absolute;
-    bottom: -38px;
-    right: 1600px;
+    bottom: -10px;
+    right: 1668px;
+    font-size: 39px;
+    background-color:#4246B8;
+    border: 3px solid;
+    border-color: #7F7F7F;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+#reclame-aqui a{
+    text-decoration: none;
+    color: white;
+}
+
+#reclame-aqui:hover{
     font-size: 40px;
+    transition: all 0.2s ease-out;
+    background-color: #6495ED;
+}
+
+.banner1{
+    background-color: #4246B8;
+    position: absolute;
+    top: 190px;
+    left: 300px;
+    height: 350px;
+    width: 1000px;
+    border: 3px solid;
+    border-radius: 75px;
+    border-color: #6B6FE5;
+}
+
+.banner1 h2{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 70px;
+    left: 85px;
+    max-width: 500px;
+}
+
+#geladeira{
+    position: absolute;
+    top: 25px;
+    right: -20px;
+    width: 300px;
+    transform: rotate(4deg);
+}
+
+#sofa{
+    position: absolute;
+    top: 180px;
+    right: 25px;
+    width: 300px;
+}
+
+#ps5{
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    width: 280px;
+}
+
+#fundo{
+    position: absolute;
+    top: -5px;
+    right: -50px;
+    width: 450px;
 }
