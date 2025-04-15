@@ -81,7 +81,7 @@ temperatura()
 
 """6 - Verificador de Senha"""
 def senha():
-    senha = str(input("Digite sua senha: "))
+    senha = input("Digite sua senha: ")
 
     if senha == "senac123":
         print("Acesso Garantido")
@@ -94,12 +94,12 @@ senha()
 def moedas():
     print("Convertor de Real para Dólar")
     print("Valor do Dólar= R$5.20")
-    moeda = float(input("Digíte um valor em real: "))
+    moeda = float(input("Digíte um valor em Real: "))
 
     real = moeda / 5.2
 
     if moeda >= 0:
-        print(f"A conversão para Dólar é: ${real}")
+        print(f"A conversão para Dólar é: ${real:.3f}")
 
     else:
         print("Conversão indisponível")
@@ -131,13 +131,47 @@ media()
 def caixa_eletronico():
     print("- Bem vindo ao ATM -")
     print("Cédulas disponíveis para saque: R$100, R$50, R$20, R$10")
-    valor = int(input("Digite um valor a ser sacado: "))
+    valor = int(input("Digite um valor (múltiplo de 10) a ser sacado: "))
 
-    cedula1 = 100
-    cedula2 = 50
-    cedula3 = 20
-    cedula4 = 10
+    if valor % 10 != 0: #Caractere % significa resto de divisão
+        print("Valor indisponível")
 
-    if valor 
+    else:
+        ced100 = valor // 100
+        valor %= 100
+        ced50 = valor// 50
+        valor %= 50
+        ced20 = valor // 20
+        valor %= 20
+        ced10 = valor // 10
+        valor %= 10
+
+        print("Notas entregues: ")
+        if ced100 > 0:
+            print(f"{ced100} nota(s) de R$100.")
+        if ced50 > 0:
+            print(f"{ced50} nota(s) de R$50.")
+        if ced20 > 0:
+            print(f"{ced20} nota(s) de R$20.")
+        if ced10 > 0:
+            print(f"{ced10} nota(s) de R$10.")
+
+caixa_eletronico()
 
 
+"""10 - Calculadora de IMC com Classificação"""
+def calculadora_imc():
+    peso = float(input("Digite o seu peso em kg: "))
+    altura = float(input("Digite sua altura em metros: "))
+    imc = peso / (altura ** 2)
+
+    if imc <18.5:
+        print("Desnutrido")
+    elif imc <= 24.9:
+        print("Peso normal")
+    elif imc <= 29.9:
+        print("Sobrepeso")
+    elif imc >= 30:
+        print("Obesidade")
+
+calculadora_imc()
