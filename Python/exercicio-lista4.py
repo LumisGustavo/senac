@@ -83,8 +83,33 @@ cronometro()
 
 """6 - Analisador de Dados Numéricos"""
 import statistics
-
 def analise():
+    numeros = []
+    for i in range (5):
+        numero = float(input(f"Digite o {i + 1}° número: "))
+        numeros.append(numero)
 
-    media = statistics.mean
-    numeros = input("Digite o ° número ")
+    media = statistics.mean(numeros)
+    mediana = statistics.median(numeros)
+    moda = statistics.mode(numeros)
+    print(f"A média é: {media:.2f}")
+    print("A mediana é: ",mediana)
+    print("A moda é: ",moda)
+
+analise()
+
+"""7 - Descubra o Dia da Semana"""
+import datetime
+
+def descobrir_dia():
+    data_desejada = input("Insira a data no formato AAAA/MM/DD: ")
+    especificacao = data_desejada.split('/')
+    ano = int(especificacao[0])
+    mes = int(especificacao[1])
+    dia = int(especificacao[2])
+    data = datetime.date(ano, mes, dia)
+    dia_semana = data.weekday()
+    dias = ["Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado", "Domingo"]
+    print(f"A data {data_desejada} é/foi: {dias[dia_semana]}")
+
+descobrir_dia()
