@@ -1,4 +1,6 @@
-"""1. (Conceitual)
+"""
+
+1. (Conceitual)
 O que é uma classe em Python?
 A) Um tipo especial de lista
 B) Um bloco de código com variáveis globais
@@ -47,7 +49,7 @@ class Carro:
     def __init__(self, modelo):
         self.modelo = modelo
 
-meu_carro = 
+meu_carro = Carro("Fiat")
 print(meu_carro.modelo)
 ________________________________________
 6. (Conceitual)
@@ -68,7 +70,7 @@ class Animal:
 a = Animal("Cachorro")
 print(a.nome)
 
-R = 
+R = Cachorro
 ________________________________________
 8. (Prática)
 Qual é a palavra-chave utilizada para definir uma classe em Python?
@@ -76,10 +78,22 @@ A) new
 B) function
 C) class
 D) define
+
+R = C
 ________________________________________
 9. (Reflexão/Criação)
 Explique com suas palavras o que significa instanciar uma classe.
-Dê um exemplo prático com o nome de uma classe fictícia.________________________________________
+Dê um exemplo prático com o nome de uma classe fictícia.
+
+R = Produzir a partir de uma classe, criar um objeto, dar caracterização a uma classe.
+Ex: class Jogo: # Criação da classe
+    def __init__(self, jogo): # Criação do objeto
+        self.jogo = jogo
+
+jogo_especifico = Jogo("GTA VI") # Instanciando o objeto
+print(jogo_especifico.jogo)
+________________________________________
+
 10. (Análise de código com erro proposital)
 Veja o código abaixo. Qual é o erro presente nele?
 class Aluno:
@@ -89,4 +103,8 @@ class Aluno:
 A) Está tudo certo
 B) A classe deveria chamar ClasseAluno
 C) Faltou o self nos parâmetros e nos atributos
-D) O nome idade deveria ser string"""
+D) O nome idade deveria ser string
+
+R = C
+
+"""
