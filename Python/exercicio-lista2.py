@@ -1,3 +1,63 @@
+"""1 - Votação de Candidato"""
+def votacao():
+    ana = 0
+    bruno = 0
+    carla = 0
+
+    print("Vote em um dos candidatos:")
+    print("1 - Ana")
+    print("2 - Bruno")
+    print("3 - Carla")
+    print("4 - Encerrar votação")
+
+    for i in range(5):
+        voto = int(input(f"{i+1}º Voto: "))
+        if voto == 1:
+            ana += 1
+        elif voto == 2:
+            bruno += 1
+        elif voto == 3:
+            carla += 1
+        elif voto == 4:
+            print("Votação encerrada")
+            break
+        else:
+            print("Voto inválido e contabilizado como nulo")
+
+    print("Resultado da votação:")
+    print("Ana:", ana, "voto(s)")
+    print("Bruno:", bruno, "voto(s)")
+    print("Carla:", carla, "voto(s)")
+
+votacao()
+
+"""2 - Sistema de Avaliação"""
+def media_aluno():
+    print("Boletim Escolar")
+    
+    while True:
+        aluno = []
+
+        for i in range(5):
+            nota = float(input(f"Digite sua {i + 1}ª nota: "))
+            aluno.append(nota)
+
+        media = sum(aluno) / 5
+
+        if media >= 7:
+            print(f"Sua média foi {media:.2f}, você foi aprovado")
+        elif 5 <= media < 7:
+            print(f"Sua média foi {media:.2f}, você está em recuperação")
+        else:
+            print(f"Sua média foi {media:.2f}, você foi reprovado")
+
+        repetir = input("Deseja calcular a média de outro aluno? (s/n): ").lower()
+        if repetir != 's':
+            print("Encerrando o programa.")
+            break
+
+media_aluno()
+
 """4 - Classificador de Números"""
 def classificar_numeros():
     positivos = 0
