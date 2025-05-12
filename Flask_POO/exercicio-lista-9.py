@@ -131,6 +131,7 @@ menu()
 """
 
 """3 - [Controle de Visitantes – Removendo os que já saíram]"""
+"""
 import sqlite3
 
 class ConexaoBanco:
@@ -165,7 +166,7 @@ class VisitanteDAO(ConexaoBanco):
             print(f"Visitante: {visitante[0]} - Motivo da visita: {visitante[1]}")
 
     def deletar_visitante(self, visitante):
-        self.cursor.execute('DELETE FROM visitantes WHERE visitante = ?', (visitante))
+        self.cursor.execute('DELETE FROM visitantes WHERE visitante = ?', (visitante, ))
         self.conexao.commit()
         print(f"Visitante {visitante} foi removido com sucesso.")
 
@@ -197,3 +198,9 @@ def menu():
             print("Opção inválida.")
 
 menu()
+"""
+
+"""4 - [Clube de Leitura – Buscar Livro pelo Título]"""
+"""
+
+"""
