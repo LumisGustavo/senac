@@ -1,0 +1,408 @@
+body{
+    background-color: #B3E5E9;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+header{
+    background-color: none;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.pesquisa{
+    background-color: #6495ED;
+    width:135px;
+    height:135px;
+    padding: 1px;
+    border-radius: 10px;
+    margin-left: 18px;
+    position: relative;
+}
+
+#logo{
+    display: flex;
+    margin: 18px;
+    width: 100px;
+}
+
+#barra-pesquisar{
+    width: 1000px;
+    padding: 15px;
+    padding-left: 10px;
+    font-size: 25px;
+    position: absolute;
+    right: 640px;
+    top: 70px;
+    border: 3px solid;
+    border-color: #ADADAD;
+    outline: none;
+}
+
+#lupa{
+    position: absolute;
+    left: 1210px;
+    top: 84px;
+}
+
+.cadastro{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    font-size: 30px;
+    background-color:#4246B8;
+    border: 3px solid;
+    border-color: #7F7F7F;
+    border-radius: 15px;
+    height: 66px;
+    width: 201px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cadastro p{
+    color: white;
+    text-decoration: none;
+}
+
+.login{
+    position: absolute;
+    top: 20px;
+    right: 300px;
+    font-size: 25px;
+    color: #3700FF;
+    text-decoration: underline;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+}
+
+.menu li{
+    margin-bottom: 11px;
+    margin-left: -50px;
+    background-color: #4246B8;
+    padding: 8px;
+    font-size: 40px;
+    border: 3px solid;
+    border-color: #7F7F7F;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.menu li:hover{
+    font-size: 41px;
+    transition: all 0.2s ease-out;
+    background-color: #6495ED;
+}
+
+footer{
+    background-color: #6495ED;
+    color: white;
+    width: 1846px;
+    padding: 25px;
+    font-size: 12px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -100px;
+    left: 5px;
+}
+
+#developer{
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+
+#copyright{
+    position: absolute;
+    bottom: 0px;
+    right: 230px;
+}
+
+#politicas{
+    position: absolute;
+    bottom: -10px;
+    right: 420px;
+    font-size: 20px;
+}
+
+#politicas a{
+    color: white;
+}
+
+#politicas a:hover{
+    color: whitesmoke;
+}
+
+#reclame-aqui{
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    font-size: 39px;
+    background-color:#6495ED;
+    border: 3px solid;
+    border-color: #7F7F7F;
+    border-radius: 5px;
+    color: white;
+    height: 132px;
+    width: 243px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#reclame-aqui:hover{
+    font-size: 40px;
+    transition: all 0.2s ease-out;
+}
+
+.banner1{
+    background-color: #4246B8;
+    position: absolute;
+    top: 190px;
+    left: 300px;
+    height: 350px;
+    width: 1000px;
+    border: 3px solid;
+    border-radius: 75px;
+    border-color: #6B6FE5;
+}
+
+.banner1 h2{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 70px;
+    left: 85px;
+    max-width: 500px;
+}
+
+#geladeira{
+    position: absolute;
+    top: 25px;
+    right: -20px;
+    width: 300px;
+    transform: rotate(4deg);
+}
+
+#sofa{
+    position: absolute;
+    top: 180px;
+    right: 25px;
+    width: 300px;
+}
+
+#ps5{
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    width: 280px;
+}
+
+#fundo{
+    position: absolute;
+    top: -5px;
+    right: -50px;
+    width: 450px;
+}
+
+.instagram{
+    position: absolute;
+    top: 200px;
+    right: 0px;
+    width: 200px;
+}
+
+.youtube{
+    position: absolute;
+    top: 270px;
+    right: 0px;
+    width: 200px;
+}
+
+.x{
+    position: absolute;
+    top: 340px;
+    right: 0px;
+    width: 200px;
+}
+
+.acessibilidade{
+    position: fixed;
+    top: 340px;
+    right: 0px;
+    width: 200px;
+}
+
+.banner2{
+    background-color: #4246B8;
+    position: absolute;
+    bottom: -25px;
+    left: 300px;
+    height: 380px;
+    width: 430px;
+    border: 3px solid;
+    border-color: #6B6FE5;
+}
+
+#ate50{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    max-width: 500px;
+    text-align: left;
+}
+
+#OFF{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 80px;
+    left: 38px;
+    max-width: 500px;
+    text-align: left;
+}
+
+#ventilador{
+    position: absolute;
+    top: 25px;
+    right: -20px;
+    width: 300px;
+}
+
+.banner3{
+    background-color: #4246B8;
+    position: absolute;
+    bottom: -25px;
+    left: 800px;
+    height: 380px;
+    width: 430px;
+    border: 3px solid;
+    border-color: #6B6FE5;
+}
+
+#marco{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: -35px;
+    left: 15px;
+    max-width: 500px;
+    text-align: left;
+}
+
+#consumidor{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    max-width: 500px;
+    text-align: left;
+}
+
+#mulher{
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    width: 300px;
+}
+
+.banner_pequeno1{
+    background-color: #4246B8;
+    position: absolute;
+    bottom: 255px;
+    right: 50px;
+    height: 127px;
+    width: 600px;
+    border: 3px solid;
+    border-color: #6B6FE5;
+}
+
+#ate30{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+#fundo_banner1{
+    position: absolute;
+    top: -5px;
+    right: 30px;
+    height: 150px;
+    transform: rotate(72deg);
+}
+
+#king_size{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 180;
+    height: 90px;
+}
+
+.banner_pequeno2{
+    background-color: #6495ED;
+    position: absolute;
+    bottom: 115px;
+    right: 50px;
+    height: 127px;
+    width: 600px;
+    border: 3px solid;
+    border-color: #6B6FE5;
+}
+
+#navegueem{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 80px;
+}
+
+.banner_pequeno3{
+    background-color: #4246B8;
+    position: absolute;
+    bottom: -25px;
+    right: 50px;
+    height: 127px;
+    width: 600px;
+    border: 3px solid;
+    border-color: #6B6FE5;
+}
+
+#ate40{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+#abajur{
+    position: absolute;
+    top: -3px;
+    left: 0px;
+    height: 130px;
+}
+
+#fundo_banner2{
+    position: absolute;
+    top: -5px;
+    left: -15px;
+    height: 150px;
+}

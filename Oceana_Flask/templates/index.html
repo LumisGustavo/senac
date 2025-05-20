@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Oceana</title>
+</head>
+<body>
+    <header>
+
+     <div class="container">
+
+        <div class="pesquisa">
+            <img src="{{ url_for('static', filename='uploads/' ~ oceana_logo.png) }}" alt="logo" id="logo">
+        </div>
+
+        <input type="text" placeholder="Pesquisar" id="barra-pesquisar">
+        <img src="{{ url_for('static', filename='uploads/' ~ lupa.png) }}" alt="lupa" id="lupa">
+
+        <a href="{{ url_for('register') }}">
+        <div class="cadastro">
+            <p>Cadastre-se</p>
+        </div>
+        </a>
+
+        <a href="{{ url_for('login') }}">
+        <div class="login">
+            <p>Login</p>
+        </div>
+        </a>
+
+    </header>
+
+    <main class="principal">
+        <section class="container">
+
+            <div>
+             <nav>
+                <ul class="menu">
+                 <div>
+                    <a href="#"><li>Casa</li></a>
+                    <a href=#><li>Mercado</li></a>
+                    <a href=#><li>Eletrônicos</li></a>
+                    <a href=#><li>Decoração</li></a>
+                    <a href=#><li>Escritório</li></a>
+                    <a href=#><li>Livros</li></a>
+                    <a href=#><li>Games</li></a>
+                 </div>
+                </ul>
+            
+             </nav>
+            </div>
+
+            <a href="#">
+            <div class="banner1">
+                <h2>Descontos Incríveis Esperam Por Você! 🌊</h2>
+                <img src="{{ url_for('static', filename='uploads/' ~ fundo_banner.png) }}" alt="fundo" id="fundo">
+                <img src="{{ url_for('static', filename='uploads/' ~ geladeira_no_copyright.png) }}" alt="geladeira" id="geladeira">
+                <img src="{{ url_for('static', filename='uploads/' ~ ps5.png) }}" alt="ps5" id="ps5">
+                <img src="{{ url_for('static', filename='uploads/' ~ sofa_no_copyright) }}" alt="sofa" id="sofa">
+            </div>
+            </a>
+
+            <a href="#">
+                <div class="instagram">
+                    <img src="{{ url_for('static', filename='uploads/' ~ instagram.png) }}" alt="instagram" id="instagram">
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="youtube">
+                    <img src="{{ url_for('static', filename='uploads/' ~ youtube.png) }}" alt="youtube" id="youtube">
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="x">
+                    <img src="{{ url_for('static', filename='uploads/' ~ x.png) }}" alt="x" id="x">
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="acessibilidade">
+                    <img src="{{ url_for('static', filename='uploads/' ~ acessibilidade.png) }}" alt="acessibilidade" id="acessibilidade">
+                </div>
+            </a>
+
+            <a href="#">
+            <div class="banner2">
+                <h2 id="ate50">Até 50%</h2>
+                <h2 id="OFF">OFF</h2>
+                <img src="{{ url_for('static', filename='uploads/' ~ ventilador.png) }}" alt="ventilador" id="ventilador">
+            </div>
+            </a>
+
+            <a href="#">
+                <div class="banner3">
+                    <h2 id="marco">MARÇO DO</h2>
+                    <h2 id="consumidor">CONSUMIDOR</h2>
+                    <img src="{{ url_for('static', filename='uploads/' ~ mulher_compras.png) }}" alt="mulher" id="mulher">
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="banner_pequeno1">
+                    <h2 id="ate30">Descontos de até 30% 🌊</h2>
+                    <img src="{{ url_for('static', filename='uploads/' ~ fundo_banner.png) }}" alt="fundo_banner1" id="fundo_banner1">
+                    <img src="{{ url_for('static', filename='uploads/' ~ king_size.png) }}" alt="king_size" id="king_size">
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="banner_pequeno2">
+                    <h2 id="navegueem">Navegue em um oceano de opções</h2>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="banner_pequeno3">
+                    <h2 id="ate40">🌊 Até 40% OFF, só na OCEANA</h2>
+                    <img src="{{ url_for('static', filename='uploads/' ~ fundo_banner.png) }}.png" alt="fundo_banner2" id="fundo_banner2">
+                    <img src="{{ url_for('static', filename='uploads/' ~ abajur.png) }}" alt="abajur" id="abajur">
+                </div>
+            </a>
+
+            <div>
+                <a href="#"><p id="reclame-aqui">Reclame Aqui</p></a>
+            </div>
+
+    </main>
+
+</body>
+
+<footer>
+    <p id="politicas"><a href="#">Políticas de Privacidade</a></p>
+    <p id="copyright">Todos os direitos reservados 2025</p>
+    <h3 id="developer">Desenvolvido por Luiz Gustavo</h3>
+</footer>
+
+
+</html>
