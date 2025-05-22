@@ -6,6 +6,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Fazer Login</title>
 </head>
+
+<header>
+    <a href="{{ url_for('index') }}">
+    <div class="pesquisa">
+        <img src="{{ url_for('static', filename='uploads/oceana_logo.png') }}" alt="logo" id="logo">
+    </div>
+    </a>
+</header>
+
 <body>
     <h2>Fazer Login</h2>
     <form method="POST">
