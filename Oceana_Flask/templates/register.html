@@ -10,10 +10,11 @@
     <form method="POST">
         Nome: <input type="text" name="nome" required><br>
         Email: <input type="email" name="email" required><br>
-        CPF: <input type="text" name="cpf" required><br>
+        CPF (somente números): <input type="text" name="cpf" required><br>
         Senha: <input type="password" name="senha" required><br><br>
         <button type="submit">Cadastrar</button>
     </form>
+    <p>Senha necessita de: 8+ caracteres, 1 maiuscula, 1 número e 1 caracter especial</p>
     <a href="{{ url_for('login') }}">Já tem conta? Faça login!</a>
 </body>
 </html>
