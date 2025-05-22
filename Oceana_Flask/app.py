@@ -8,8 +8,6 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'chave_gustavo'
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 
-EXTENSOES = {'png', 'jpg', 'jpeg', 'gif'}
-
 DATABASE = 'users.db'
 
 def get_db():
@@ -23,9 +21,6 @@ def close_db(error):
     db = g.pop('db', None)
     if db is not None:
         db.close()
-
-def extensao_valida(nome_arquivo):
-    return '.' in nome_arquivo and nome_arquivo.rsplit('.', 1).lower in EXTENSOES
 
 def inicializar_banco():
     with app.app_context():
@@ -43,13 +38,7 @@ def inicializar_banco():
 
 @app.route('/')
 def index():
-    db = get_db()
-    posts = db.execute('''
-        SELECT p.titulo, p.conteudo, p.imagem, u.nome
-        FROM posts p
-        JOIN usuarios u ON p.autor_id = u.id
-    ''').fetchall()
-    return render_template('index.html', posts=posts)
+    return render_template('index.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -59,6 +48,9 @@ def register():
         email = request.form['email']
         senha = request.form['senha']
 
+        if len(cpf) < 11:
+            return "CPF Inválido. Requisitos: 11 caracteres"
+        
         if len(senha) < 8:
             return "Senha fraca. Requisitos: 8+ caracteres, 1 maiuscula, 1 número e 1 símbolo."
         
@@ -66,9 +58,9 @@ def register():
         try:
             db.execute('INSERT INTO usuarios (nome, cpf, email, senha) VALUES (?, ?, ?, ?)', (nome, cpf, email, senha))
             db.commit()
-            return redirect(url_for('login'))
+            return redirect(url_for('index_perfil'))
         except sqlite3.IntegrityError:
-            return "Error: CPF ou email já cadastrados."
+            return "Erro: CPF ou email já cadastrados."
     
     return render_template('register.html')
 
@@ -82,10 +74,38 @@ def login():
         if usuario:
             session['usuario_id'] = usuario['id']
             session['usuario_nome'] = usuario['nome']
-            return redirect(url_for('dashboard'))
+            return redirect(url_for('index_perfil'))
         else:
             return "Login inválido."
     return render_template('login.html')
+
+@app.route('/index_perfil')
+def index_perfil():
+    if 'usuario_id' not in session:
+        return redirect(url_for('login'))
+    return render_template('index_perfil.html', nome=session['usuario_nome'])
+
+@app.route('/perfil')
+def perfil():
+    if 'usuario_id' not in session:
+        return redirect(url_for('login'))
+    
+    db = get_db()
+    usuario = db.execute('SELECT * FROM usuarios WHERE id=?', (session['usuario_id'],)).fetchone()
+    
+    return render_template('perfil.html', usuario=usuario)
+
+@app.route('/excluir_conta', methods=['POST'])
+def excluir_conta():
+    if 'usuario_id' not in session:
+        return redirect(url_for('login'))
+    
+    db = get_db()
+    db.execute('DELETE FROM usuarios WHERE id=?', (session['usuario_id'],))
+    db.commit()
+    
+    session.clear()
+    return redirect(url_for('index'))
     
 @app.route('/logout')
 def logout():
